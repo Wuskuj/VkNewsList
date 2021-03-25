@@ -7,13 +7,23 @@
 
 import UIKit
 
+protocol AuthServiceDelegate : class {
+    func authServiceShouldShow(viewController: UIViewController)
+    func authServiceSignIn()
+    func authServiceFailed()
+}
+
 class AuthViewController: UIViewController {
+
+    private var authService: AuthService!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        authService = SceneDelegate.shared().authService
     }
 
-
+    @IBAction func authButtonAction(_ sender: Any) {
+        self.authService.wakeUpSession()
+    }
 }
 
