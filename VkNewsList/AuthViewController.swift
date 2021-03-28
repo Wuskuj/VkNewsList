@@ -19,7 +19,6 @@ class AuthViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("qwe")
         authService = SceneDelegate.shared().authService
     }
 

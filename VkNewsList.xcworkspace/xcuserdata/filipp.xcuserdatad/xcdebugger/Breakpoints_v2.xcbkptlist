@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "19000738-7075-45FC-B452-3084EA90DB43"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FB979CC2-A25A-42DA-8AA8-90CE11744FBF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "VkNewsList/NewsFeedInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "makeRequest(request:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FB979CC2-A25A-42DA-8AA8-90CE11744FBF - dfe6b229a7d98952"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "VkNewsList.NewsFeedInteractor.makeRequest(request: VkNewsList.NewsFeed.Model.Request.RequestType) -&gt; ()"
+                  moduleName = "VkNewsList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/filipp/Desktop/VKNewsList/VkNewsList/VkNewsList/NewsFeedInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "178">
+               </Location>
+               <Location
+                  uuid = "FB979CC2-A25A-42DA-8AA8-90CE11744FBF - c3259138000401b7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;VkNewsList.FeedResponse&gt;) -&gt; () in VkNewsList.NewsFeedInteractor.makeRequest(request: VkNewsList.NewsFeed.Model.Request.RequestType) -&gt; ()"
+                  moduleName = "VkNewsList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/filipp/Desktop/VKNewsList/VkNewsList/VkNewsList/NewsFeedInteractor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "167">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
