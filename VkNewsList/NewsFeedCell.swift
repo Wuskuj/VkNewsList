@@ -13,12 +13,20 @@ protocol FeedCellViewModel {
 
     var text: String? { get }
 
-    var photoAttachment: FeedCellPhotoAttachmentViewModel? { get }
-
+    var photoAttachments: [FeedCellPhotoAttachmentViewModel] { get }
+    var sizes: FeedCellSizes { get }
     var likes: String? { get }
     var comments: String? { get }
     var shares: String? { get }
     var views: String? { get }
+}
+
+protocol FeedCellSizes {
+    var postLabelFrame: CGRect { get }
+    var attachmentFrame: CGRect { get }
+    var bottomView: CGRect { get }
+    var totalHeight: CGFloat { get }
+    var moreTextButtonFrame: CGRect { get }
 }
 
 protocol FeedCellPhotoAttachmentViewModel {
@@ -44,6 +52,13 @@ class NewsFeedCell: UITableViewCell {
 
     @IBOutlet weak var postImageView: WebImageView!
 
+    @IBOutlet weak var bottomView: UIView!
+
+    override func prepareForReuse() {
+        iconImageView.set(imageURL: nil)
+        postImageView.set(imageURL: nil)
+    }
+    
     static let reuseId = "NewsFeedCell"
 
     override func awakeFromNib() {
@@ -67,12 +82,15 @@ class NewsFeedCell: UITableViewCell {
         self.shareLabel.text = viewModel.shares
         self.viewsLabel.text = viewModel.views
         self.iconImageView.set(imageURL: viewModel.iconUrlString)
+        self.postLabel.frame = viewModel.sizes.postLabelFrame
+        self.postImageView.frame = viewModel.sizes.attachmentFrame
+        self.bottomView.frame = viewModel.sizes.bottomView
 
-        if let photoAttachment = viewModel.photoAttachment {
-            postImageView.set(imageURL: photoAttachment.photoUrlString)
-            postImageView.isHidden = false
-        } else {
-            postImageView.isHidden = true
-        }
+//        if let photoAttachment = viewModel.photoAttachment {
+//            postImageView.set(imageURL: photoAttachment.photoUrlString)
+//            postImageView.isHidden = false
+//        } else {
+//            postImageView.isHidden = true
+//        }
     }
 }
